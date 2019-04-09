@@ -7,13 +7,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class Config {
-    @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder routeLocatorBuilder) {
-        return routeLocatorBuilder.routes()
-                .route(p -> p
-                    .path("/hello/**")
-                    .filters(f -> f.hystrix(config -> config.setName("mycmd")))
-                    .uri("lb://PROVIDER-HELLO"))
-                .build();
-    }
+//    @Bean
+//    public RouteLocator customRouteLocator(RouteLocatorBuilder routeLocatorBuilder) {
+//        return routeLocatorBuilder.routes()
+//                .route(p -> p
+//                    .path("/hello/**")
+//                    .filters(f -> f.hystrix(config -> config.setName("mycmd")))
+//                    .uri("lb://CLIENT"))
+//                .build();
+//    }
 }

@@ -1,3 +1,9 @@
+server:
+  port: 8130
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
 spring:
   application:
     name: gateway
@@ -7,15 +13,8 @@ spring:
         locator:
           enabled: true
           lowerCaseServiceId: true
-#    globalcors:
-#      corsConfigurations:
-#        '[/**]':
-#          allowedOrigins: "https://docs.spring.io"
-#          allowedMethods:
-#            - GET
-server:
-  port: 8120
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8100/eureka
+      routes:
+        - id: hello
+          uri: lb://CLIENT
+          predicates:
+          - Path=/hello/**

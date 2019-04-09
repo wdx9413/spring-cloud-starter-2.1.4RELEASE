@@ -1,6 +1,6 @@
 spring:
   application:
-    name: provider-hello
+    name: service-hello
 server:
   port: 8110
 eureka:

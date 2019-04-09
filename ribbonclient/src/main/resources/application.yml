@@ -1,9 +1,17 @@
 spring:
   application:
-    name: provider-hello
+    name:
+      client
 server:
-  port: 8110
+  port: 8120
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8100/eureka
+
+ribbon:
+  eureka:
+    enabled: true
+
+
