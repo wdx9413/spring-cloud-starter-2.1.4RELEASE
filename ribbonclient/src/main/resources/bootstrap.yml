@@ -15,10 +15,11 @@ spring:
       profile: dev
       label: master
   zipkin:
-    base-url: http://localhost:9411
+    enabled: true
+    baseUrl: http://localhost:9411
+    sender:
+      type: web
   sleuth:
     sampler:
       probability: 1.0
-    web:
-      client:
-        enabled: true
+    trace-id128: true

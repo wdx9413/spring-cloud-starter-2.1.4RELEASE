@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class HelloController {
+
     @Autowired
     HelloService helloService;
     @GetMapping("/hello")
