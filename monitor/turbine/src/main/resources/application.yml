@@ -1,0 +1,18 @@
+
+server:
+  port: 8150
+
+spring:
+  application:
+    name: monitor-turbine
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
+turbine:
+  app-config: service-hello,client
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+  instanceUrlSuffix: hystrix.stream
