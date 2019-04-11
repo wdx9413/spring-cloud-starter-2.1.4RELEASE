@@ -1,15 +1,15 @@
 ﻿# Spring Cloud脚手架
 
 spring cloud starter
-```
--- blog-cloud
-    -- eureka 服务注册中心
-    -- config 分布式配置中心 git版
-    -- gateway 网管
-    -- ribbonclient(ribbon + hystrix) 客户端
-    -- service 业务层
-        -- hello
-    -- monitor 监控层
-        -- turbine hystrix聚合监控
-        -- zipkin.jar sleuth链路追踪
-```
+
+| name | desc | port | start-order|
+| --- | --- | --- | ---|
+| eureka | 服务注册中心 | 8100 | 1|
+| config | 分布式配置中心git | 8140 | 2|
+| gateway | API网关 | 8130 | 4|
+| ribbonclient | 服务消费客户端 | 8120 | 4|
+| service | 业务层 | -- | --|
+| service-hello | 业务hello | 8110 | 4|
+| monitor | 监控层 | -- | -- |
+| monitor-turbine | hystrix监控聚合 | 8150 | 5 |
+| monitor-zipkin.jar | 链路追踪server jar包 | 9411 | 3 |
