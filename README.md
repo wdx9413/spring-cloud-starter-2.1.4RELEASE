@@ -1,6 +1,13 @@
 ﻿# Spring Cloud脚手架
 
-spring cloud starter
+## 先决条件
+
+* git
+* intellij idea
+* java
+* rabbitmq
+
+## spring cloud starter
 
 | 服务名 | 简介 | 端口 | 启动顺序|
 | --- | --- | --- | ---|
